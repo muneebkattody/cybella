@@ -8,12 +8,13 @@ body{
     background: #D0DFE6;
     font-weight: 500;
     text-transform: capitalize;
+    overflow-x: hidden;
 }
 .main{
     height:100vh;
     width:100%;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, .8)), url('nikita-kachanovsky-445394-unsplash.jpg');
+    background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url('fotis-fotopoulos-790373-unsplash.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -99,6 +100,10 @@ p{
     font-size:1.2em;
 }
 
+.card-content{
+    font-size:1.2em;
+}
+
 @media only screen and (max-width: 600px) {
     .cybella h1{
         font-size: 5em;
@@ -111,5 +116,11 @@ p{
         margin-right: 0px;
         float: none;
         margin-bottom: 20px;
+    }
+
+    .main{
+        background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url('arif-riyanto-974674-unsplash.jpg');   
+        background-size: cover;
+        background-attachment: fixed;
     }
 }
