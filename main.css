@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    font-family:arial;
+    font-family: dosis;
     background: #D0DFE6;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 .main{
     height:100vh;
@@ -23,12 +25,18 @@ body{
     color: #fff;
     text-align: center;
 }
+.hero-scroll{
+    position:absolute;
+    bottom: 30px;
+    left:50%;
+    transform: translate(-50%, 0);
+    color:#fff;
+}
 .cybella h1{
-    font-size: 6em;
-    font-family: arial;
+    font-size: 900%;
 }
 header{
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
     z-index:1000;
@@ -62,8 +70,46 @@ a.nav{
     padding: 0 30%;
 }
 .card-title{
-    color:#000 !important;
+    color:#fff;
+    font-weight:700;
+}
+.card-image img{
+    filter: brightness(50%);
 }
 .card .collection{
     margin: 0 !important;
+}
+p{
+    font-size: 1.2em;
+}
+.inau{
+    padding:8em 0;
+    background:#fff;
+    color:rgba(0, 0, 0, .8);
+}
+.inau-avatar{
+    height:200px;
+    float: right;
+    border-radius: 50%;
+    margin-right:30px;
+}
+
+.inau span{
+    display: block;
+    font-size:1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .cybella h1{
+        font-size: 5em;
+    }
+
+    .inau{
+        text-align: center;
+    }
+    .inau-avatar{
+        margin-right: 0px;
+        float: none;
+        margin-bottom: 20px;
+    }
 }
