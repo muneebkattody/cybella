@@ -1,0 +1,51 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family:arial;
+}
+.main{
+    height:100vh;
+    width:100%;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('nikita-kachanovsky-445394-unsplash.jpg');
+    background-size: cover;
+    position: relative;
+}
+.cybella{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+.cybella h1{
+    font-size: 6em;
+    font-family: arial;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    padding:15px 15px;
+    width:100%;
+}
+.cybella span{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.2em;
+}
+.logo{
+    color:yellow;
+    font-size: 1.5em;
+}
+a{
+    text-decoration: none;
+}
+a.nav{
+    float:right;
+    padding: 10px;
+}
