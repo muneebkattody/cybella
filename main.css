@@ -112,10 +112,38 @@ p{
 }
 footer{
     width:100%;
+    padding:7em 0;
 }
 .copy{
     display:block;
     font-size:1.2em;
+}
+.contact{
+    background: #fff;
+    text-align: center;
+    padding:7em 0 !important;
+}
+.contact h3{
+    margin-bottom: 60px;
+}
+.contact-cont{
+    padding: 10px;
+    color: rgba(0, 0, 0, .8);
+}
+.contact-img img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.contact-para p{
+    padding: 5%;
+    margin: 20px 0px 10px 0px;
+}
+.contact-para span{
+    font-size:1.2em;
+    margin-bottom: 8px;
+    display:block;
 }
 @media only screen and (max-width: 600px) {
     .cybella h1{
@@ -135,5 +163,9 @@ footer{
         background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url('arif-riyanto-974674-unsplash.jpg');   
         background-size: cover;
         background-attachment: fixed;
+    }
+
+    .contact-cont{
+        margin-bottom: 40px !important;
     }
 }

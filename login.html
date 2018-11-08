@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CYBELLA - Computer Science department Inauguration Sree Narayana College 2018-19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet">
+    <style>
+        .new-input {
+            margin: auto;
+            max-width: 400px;
+            padding: 10px;
+            margin-top: 5%;
+        }
+        .new-input .card {
+            padding: 10px;
+            padding-top: 30px;
+        }
+        .card-title{
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="new-input">
+        <div class="card">
+            <form id="newData" action="show.php" method="post" enctype="multipart/form-data" class="container col s12">
+                <span class="card-title">Login Form</span>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="key" id="key" type="password">
+                        <label for="name">Enter Key</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input type="submit" class="waves-effect waves-light btn" id="sub">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
