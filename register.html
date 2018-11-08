@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dorectory</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .new-input{
+        margin:auto;
+        max-width:400px;
+        padding:10px;
+        margin-top:5%;
+    }
+    .new-input .card{
+        padding:10px;
+        padding-top:30px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="new-input">
+        <div class="card">
+            <form id="newData" action="" method="post" enctype="multipart/form-data" class="container col s12">
+                <span class="card-title">Registeration Form</span>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="name" id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="phone" id="phone" type="text" class="validate">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" name="prog" id="autocomplete-input" class="autocomplete validate"
+                            autocomplete="off">
+                        <label for="autocomplete-input">Programme</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="browser-default" class="validate" name="dept">
+                            <option>Select department</option>
+                            <option>BSc. Computer Science</option>
+                            <option>Bsc. Mathematics</option>
+                            <option>Bsc. Statistics</option>
+                            <option>Bsc. Physics</option>
+                            <option>Bsc. Chemistry</option>
+                            <option>Bsc. Psychology</option>
+                            <option>BA English</option>
+                            <option>BCom. Finance</option>
+                            <option>BCom. Computer Application</option>
+                            <option>BCom. Corperation</option>
+                            <option>BA Malayalam</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="browser-default" class="validate" name="year">
+                            <option>Select Year</option>
+                            <option>First Year</option>
+                            <option>Second year</option>
+                            <option>third year</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input type="submit" class="waves-effect waves-light btn" id="sub">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $("#newData").on('submit', (function (e) {
+                e.preventDefault();
+                M.toast({ html: 'Uploading...', displayLength: '40000' });
+                $.ajax({
+                    url: "newdata.php", // Url to which the request is send
+                    type: "POST",             // Type of request to be send, called as method
+                    data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+                    contentType: false,       // The content type used when sending data to the server.
+                    cache: false,             // To unable request pages to be cached
+                    processData: false,        // To send DOMDocument or non processed data file it is set to false
+                    success: function (data) {
+                        clearToast();
+                        M.toast({ html: data });
+                    },
+                    error: function (xhtr) {
+                        clearToast();
+                        var errorHtml = 'Error Occured. <button class="btn-flat toast-action" onclick="retry();">RETRY</button>';
+                        M.toast({ html: errorHtml });
+                    }
+
+                });
+            }));
+        });
+
+        $(document).ready(function () {
+            $('input.autocomplete').autocomplete({
+                data: {
+                    "Quiz": null,
+                    "mini Miltia Competition ": null,
+                    "Scrambled Word": null,
+                    "memory Test": null,
+                    "Troll Making": null,
+                    "Five level Task": null,
+                    "tresure Hunt": null
+                },
+                onAutocomplete: function (txt) {
+                    selectedInput(txt);
+                },
+                limit: 20,
+            });
+        });
+
+
+
+        function clearToast() {
+            var toastElement = document.querySelector('.toast');
+            var toastInstance = M.Toast.getInstance(toastElement);
+            toastInstance.dismiss();
+        }
+
+        function retry() {
+            console.log('clicked');
+            $("#sub").click();
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
