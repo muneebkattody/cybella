@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CYBELLA - Computer Science department Inauguration Sree Narayana College 2018-19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700" rel="stylesheet">
+    <style>
+        .new-input{
+            margin:auto;
+            max-width:400px;
+            padding:10px;
+            margin-top:5%;
+        }
+        .new-input .card{
+            padding:10px;
+            padding-top:30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+
+
+        </div>
+    </form>
+
+    <div class="new-input">
+        <div class="card">
+            <form class="container col s12" action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="name" id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="phone" id="phone" type="text" class="validate">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="browser-default" class="validate" name="dept">
+                            <option>Select department</option>
+                            <option>BSc_Computer Science</option>
+                            <option>Bsc_Mathematics</option>
+                            <option>Bsc_Statistics</option>
+                            <option>Bsc_Physics</option>
+                            <option>Bsc_Chemistry</option>
+                            <option>Bsc_Psychology</option>
+                            <option>BA_English</option>
+                            <option>BCom_Finance</option>
+                            <option>BCom_Computer Application</option>
+                            <option>BCom_Corperation</option>
+                            <option>BA_Malayalam</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="browser-default" class="validate" name="year">
+                            <option>Select_Year</option>
+                            <option>First_Year</option>
+                            <option>Second_year</option>
+                            <option>third_year</option>
+                        </select>
+                    </div>
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" name="fileToUpload" id="fileToUpload" />>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="submit" value="Upload Image" name="submit" class="waves-effect waves-light btn" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('input.autocomplete').autocomplete({
+                data: {
+                    "Quiz": null,
+                    "mini Miltia Competition ": null,
+                    "Scrambled Word": null,
+                    "memory Test": null,
+                    "Troll Making": null,
+                    "Five level Task": null,
+                    "tresure Hunt": null
+                },
+                onAutocomplete: function (txt) {
+                    selectedInput(txt);
+                },
+                limit: 20,
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
