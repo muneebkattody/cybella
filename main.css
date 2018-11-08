@@ -152,6 +152,16 @@ footer a{
     margin-bottom: 8px;
     display:block;
 }
+.photo-add{
+    padding:3em 15px;
+    text-align:center;
+    background: #c50d66;
+    color: yellow;  
+}
+.photo-add a{
+    color: yellow;
+    text-decoration: underline;
+}
 @media only screen and (max-width: 600px) {
     .cybella h1{
         font-size: 5em;
@@ -167,7 +177,6 @@ footer a{
     }
 
     .main{
-        background: #13334c;
         background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url('bg2.jpg');   
         background-size: cover;
         background-attachment: fixed;
