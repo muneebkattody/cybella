@@ -6,7 +6,6 @@
 body{
     font-family: dosis;
     background: #fff;
-    /* #D0DFE6*/
     font-weight: 500;
     text-transform: capitalize;
     overflow-x: hidden;
@@ -168,6 +167,7 @@ footer a{
     }
 
     .main{
+        background: #13334c;
         background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url('bg2.jpg');   
         background-size: cover;
         background-attachment: fixed;
@@ -177,3 +177,10 @@ footer a{
         margin-bottom: 40px !important;
     }
 }
+
+/*
+#13334crgba(19,51,76,1)
+#005792rgba(0,87,146,1)
+#f6f6e9rgba(246,246,233,1)
+#fd5f00rgba(253,95,0,1)
+*/
